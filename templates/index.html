@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Movie Recommender</h2>
+<form action="/recommend" method="post">
+<input name="movie" list="movies">
+<datalist id="movies">
+{% for t in titles %}
+<option value="{{ t }}">
+{% endfor %}
+</datalist>
+<button>Recommend</button>
+</form>
+{% endblock %}
