@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movie App</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<nav>
+<a href="/">Home</a>
+<a href="/dashboard">Dashboard</a>
+<a href="/logout">Logout</a>
+</nav>
+{% block content %}{% endblock %}
+</body>
+</html>
