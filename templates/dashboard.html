@@ -1,0 +1,19 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+var labels = {{ labels | tojson }};
+var values = {{ values | tojson }};
+
+var ctx = document.getElementById('chart').getContext('2d');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Movies',
+            data: values
+        }]
+    }
+});
+</script>
